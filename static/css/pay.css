@@ -1,0 +1,86 @@
+:root {
+    --emerald: #21BA72;
+    --red: #c00;
+}
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    padding: 50px 20%;
+    font-size: 20px;
+    background-image: unset !important;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    margin-top: 50px;
+}
+.sber-logo {
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.pay-shop-label {
+    opacity: .5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.pay-amount {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+}
+.pay-amount::after {
+    content: ' ▼';
+    font-size: 14px;
+    opacity: .75;
+    translate: 10px -50%;
+    position: absolute;
+    top: 50%;
+}
+.pay-card-box {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.pay-raw {
+    display: flex;
+    gap: 5px;
+}
+.pay-raw > * {
+    flex: 1;
+    width: 120px;
+}
+.pay-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+.pay-title > span {
+    font-weight: bold;
+}
+.pay-title > span::after {
+    content: 'руб.';
+}
+.pay-proceed {
+    background-color: var(--emerald);
+    padding: 15px 35px;
+    color: white;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+}
+.pay-proceed:hover {
+    filter: brightness(1.1);
+}
+.wrapper {
+    margin-top: 5px;
+}

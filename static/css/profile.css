@@ -1,0 +1,120 @@
+main {
+    padding: 20px 5%;
+}
+.label-text {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: orange;
+    font-weight: bold;
+    text-align: center;
+}
+.frame:not(.frames-wrapper > .frame) {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.frame-label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    opacity: .5;
+}
+.frames-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.frames-wrapper > * {
+    flex: none !important;
+}
+.prev-booking__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 280px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+.frame-content__car-info {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    align-items: center;
+}
+.frame-content:not(.user-info) {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+.frame-content.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+.car-number,
+.status > p {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px;
+    user-select: none;
+    text-transform: uppercase;
+}
+.prev-booking__card img {
+    width: 32px;
+}
+.frame-content__info {
+    font-size: 14px;
+}
+.status {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.status > p {
+    padding: 2px 10px;
+    font-size: 12px;
+    color: green;
+    border-color: green;
+}
+.status > p.status-current {
+    color: orange;
+    border-color: orange;
+}
+.status > p.status-reject {
+    color: red;
+    border-color: red;
+}
+.profile-controls {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+.frame-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#booking-cards-holder {
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+#booking-cards-holder > * {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.booking-new_actions {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}

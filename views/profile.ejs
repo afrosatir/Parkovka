@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
+    <script src="./js/core.js" defer></script>
+    <script src="./js/profile.js" defer></script>
+</head>
+<body>
+    <%- include('./elements/header.ejs') -%>
+
+    <main>
+
+        <p class="label-text">Личный кабинет</p>
+
+        <div class="frame">
+            <p class="frame-label">Пользователь</p>
+            <div class="frame-content user-info">
+                <p>Имя: <%= user.firstName %> <%= user.lastName %> [<%= user.role %>]</p>
+                <p>Логин: <%= user.login %></p>
+                <div class="profile-controls">
+                    <button class="goto" onclick="window.location.href='./logout'">Сменить аккаунт</button>
+                    <% if(user.role == 'admin') {%>
+                    <button class="goto" onclick="window.location.href='./admin'">Панель администратора</button>
+                    <% } %>
+                    <button class="goto main" onclick="window.location.href='/booking/new'">Новая бронь</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame">
+            <p class="frame-label">История бронирования</p>
+            <div class="frame-content" id="booking-cards-holder"></div>
+        </div>
+
+    </main>
+
+    <%- include('./elements/footer.ejs') -%>
+</body>
+</html>

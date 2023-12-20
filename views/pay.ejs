@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата места</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pay.css">
+
+    <script src="./js/core.js" defer></script>
+</head>
+<body>
+    <div class="logotype">
+        <img class="sber-logo" src="./images/sber.svg" alt="">
+        <div class="develop-controls">
+            <a class="debug green" href="/pay/success">Успех</a>
+            <a class="debug" href="/pay/reject">Отклонение</a>
+        </div>
+    </div>
+
+    <main>
+        <p class="pay-shop-label">Оплата паркововочного места (СПб_ПО5-6726)</p>
+        <p class="pay-amount">1.00</p>
+        <div class="pay-card-box">
+            <input type="text" placeholder="Номер карты">
+            <div class="pay-raw">
+                <input type="text" placeholder="MM">
+                <input type="text" placeholder="YY">
+            </div>
+            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="Имя">
+        </div>
+        <button class="pay-proceed">Перейти к оплате</button>
+    </main>
+</body>
+</html>

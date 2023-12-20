@@ -1,0 +1,43 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-text {
+    font-size: 48px;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.welcome-text > span {
+    font-weight: bold;
+    color: orange;
+}
+.subtext {
+    margin-bottom: 100px;
+    max-width: 900px;
+    font-size: 20px;
+    text-align: center;
+    opacity: .5;
+    line-height: 1.25em;
+}
+.welcome-actions {
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+.subaction {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    white-space: nowrap;
+    font-size: 12px;
+    translate: -50% 0;
+    user-select: none;
+    opacity: .75;
+}
+.subaction > a {
+    cursor: pointer;
+    text-decoration: underline;
+}

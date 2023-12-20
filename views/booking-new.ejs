@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новое</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <script src="../js/core.js" defer></script>
+    <script src="../js/booking-new.js" defer></script>
+</head>
+<body>
+    <%- include('./elements/header.ejs') -%>
+
+    <main>
+
+        <p class="label-text">Новое бронирование</p>
+
+        <div class="frame">
+            <p class="frame-label">Пользователь</p>
+            <div class="frame-content user-info">
+                <p><%= user.firstName %> <%= user.lastName %></p>
+            </div>
+        </div>
+
+        <div class="frame">
+            <p class="frame-label">Данные для бронирования</p>
+            <div class="frame-content user-info">
+                <form action="/profile" method="post">
+                    <input type="text" name="carNumber" id="car-number" placeholder="Государственный номер" required>
+                    <input type="text" name="address" id="address" placeholder="Адрес" required>
+                    <div class="wrapper raw">
+                        <p class="label">Начало</p>
+                        <input type="date" name="startDate" id="startDate" required>
+                        <input type="time" name="startTime" id="startTime" required>
+                    </div>
+                    <div class="wrapper raw">
+                        <p class="label">Конец</p>
+                        <input type="date" name="endDate" id="endDate" required>
+                        <input type="time" name="endTime" id="endTime" required>
+                    </div>
+                    <div class="booking-new_actions">
+                        <button class="goto back">Вернуться</button>
+                        <button class="goto main">Оформить бронирование</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+    <%- include('./elements/footer.ejs') -%>
+</body>
+</html>

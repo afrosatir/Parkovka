@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/auth.css">
+
+    <script src="./js/core.js" defer></script>
+    <script src="./js/auth.js" defer></script>
+</head>
+<body>
+    <%- include('./elements/header.ejs') -%>
+
+    <main>
+
+        <p class="action-label">Аутентификация</p>
+
+        <form action="/auth" method="post">
+            <input type="text" name="login" id="login" placeholder="Логин">
+            <input type="password" name="password" id="password" placeholder="Пароль">
+            <button class="goto main only-style">Вход</button>
+        </form>
+        <p class="subaction">У вас ещё нет аккаунта? <a class="register" href="/register">Зарегистрируйтесь!</a></p>
+
+    </main>
+
+    <%- include('./elements/footer.ejs') -%>
+</body>
+</html>

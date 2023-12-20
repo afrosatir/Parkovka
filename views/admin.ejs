@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
+    <script src="./js/core.js" defer></script>
+    <script src="./js/profile.js" defer></script>
+</head>
+<body>
+    <%- include('./elements/header.ejs') -%>
+
+    <main>
+
+        <p class="label-text">Администрирование сайта</p>
+
+        <div class="frame">
+            <p class="frame-label">Пользователь</p>
+            <div class="frame-content user-info">
+                <p>Имя: <%= user.firstName %> <%= user.lastName %> [<%= user.role %>]</p>
+                <p>Логин: <%= user.login %></p>
+                <div class="profile-controls">
+                    <button class="goto main" onclick="window.location.href='./profile'">Личный кабинет</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="frame">
+            <div class="frame-label">Пользователи</div>
+            <div class="frame-content">
+                <button class="goto">Список пользователей</button>
+                <button class="goto">Заблокированные</button>
+                <button class="goto">Ограничения</button>
+                <button class="goto">Права пользователей</button>
+                <button class="goto">Обращения</button>
+                <button class="goto">Отзывы</button>
+            </div>
+        </div>
+
+        <div class="frame">
+            <div class="frame-label">Работа с заказами</div>
+            <div class="frame-content">
+                <button class="goto">Работа с заказами</button>
+                <button class="goto">Решить проблему</button>
+            </div>
+        </div>
+
+        <div class="frame">
+            <div class="frame-label">Сервер</div>
+            <div class="frame-content">
+                <button class="goto">Закрыть сервер</button>
+                <button class="goto">Перезапуск сервера</button>
+                <button class="goto">Замена главной страницы</button>
+                <button class="goto">Переадрессация пользователей</button>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('./elements/footer.ejs') -%>
+</body>
+</html>
